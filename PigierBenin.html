@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="utf-8">
+ <link rel="stylesheet" type="text/css" href="styles.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <title> Pigier BENIN </title>
+ <style type="text/css">
+
+    body{
+        background-color: rgb(158, 146, 146);
+        margin: 0;
+    }
+
+    header{
+        color:aliceblue;
+        background-color: black;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        padding: 10px 10px;
+        box-shadow: 0 0 10px black;
+    }
+    .logopigier1{
+        width: 60px;
+        height: 60px;
+    }
+    .logopigier2{
+        width: 100px;
+        height: 100px;
+        margin-left: 5%;
+    }
+    .menu_bar{
+        margin-top: 5%;
+        background-color: black;
+        height: 80px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 5%;
+        color:aliceblue;
+        justify-content:space-between;
+        box-shadow: 0 0 10px black;
+        }
+    .menu_bar ul{
+        list-style: none;
+        display: flex;
+        width: 100%;
+        display: flex;
+        justify-content: space-around; 
+        align-items: center;
+        width: 100%;
+    }
+    .menu_bar ul li{
+        padding: 10px 30px;
+        position: relative;
+    }
+    .menu_bar ul li a{
+        color:var(--color-white) ;
+        text-decoration: none;
+        font-size: 20px;
+        transition:all 0.3s;
+    }
+    .menu_bar ul li a:hover{
+        background-color: darkgrey;
+
+
+    }
+    .dropdown_menu{
+        display:block;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background-color: var(--color-black);
+    }
+    .dropdown_menu ul{
+        display:block;
+        margin: 10px;
+        
+    }
+    .dropdown_menu ul li{
+        width: 150px;
+        padding: 10px;
+    }
+    /* Cache le menu déroulant par défaut */
+    .menu_bar .dropdown-menu {
+        display: none;
+    }
+
+/* Affiche le menu déroulant lorsque l'élément de menu parent est survolé */
+    .menu_bar li:hover .dropdown-menu {
+        display: block;
+        background-color: black;
+        line-height: 50px;
+    }
+
+    .bgImage{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image:url('image\ html/bgImage.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        animation: bgChange 10s Linear infinite;
+
+    }
+    @keyframes bgChange{
+        0%{
+            background-image: url('image\ html/bgImage.jpg');
+        }
+        20%{
+            background-image: url('image\ html/bgImage.jpg');
+        }
+       
+
+    }
+
+    .overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        Left: 0px;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .content{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        color:beige;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 2;
+    }
+    .content h1{
+        font-size: 60px;
+        margin-bottom: 0px;
+    }
+    .content h1 span{
+        color:darkgreen;
+    }
+    .content p{
+        font-size: 18px;
+        width: 60;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    .content button{
+        color: white;
+        border: none;
+        outline: none;
+        font-size:18px;
+        background-color:black;
+        padding: 14px;
+        text-transform: uppercase;
+        border-radius: 25px;
+        transition: 0.5s;
+
+    }
+    .content button:hover{
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+ </style>
+</head>
+
+<body> 
+    
+ <div class="header">
+    <header>
+     <img src="image html/pigier logo 1.png" alt="logopigier1">
+     <h1>BIENVENUE A PIGIER BENIN</h1>
+     <img src="image html/pigier logo 1.png" alt="logopigier2">
+    </header>
+ </div>
+  
+ <div class="menu_bar">
+  <ul>
+      <li><a href="Formations.html">Formations</a></li>
+      <li><a href="Debouches.html">Débouchés</a></li>
+      <li><a href="#">A propos <i class ="fas fa caret-down"></i> </a>
+        <div class="dropdown_menu">
+            <ul class="dropdown-menu">
+              <li><a href="MON CV.html">Mon CV</a></li>
+              <li><a href="Accueil text.html">Description Pigier Benin</a></li>
+            </ul>
+          </div>
+  </ul>
+</div>
+<div class="bgImage">
+    <div class="overlay"></div>
+
+    <div class="content">
+        <h1> Pigier <span>.Benin</span></h1>
+        <p id="demo"></p>
+
+        <script>
+            var i = 0;
+            var txt = 'Bienvenue à Pigier Bénin, où nous offrons une expérience éducative enrichissante. Nos programmes d\'études structurés sont complétés par des opportunités d\'apprentissage en alternance, permettant aux étudiants de combiner théorie et pratique. Nous proposons également des certifications linguistiques et techniques pour renforcer le profil de nos étudiants. De plus, nous offrons un soutien précieux pour la recherche de stages et d\'emplois, ainsi qu\'un service d\'hébergement. Ensemble, nous contribuons à une expérience étudiante complète et bien arrondie.'
+            var speed = 20;
+
+            function typeWriter() {
+                if (i < txt.length) {
+                    document.getElementById("demo").innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+
+            typeWriter();
+        </script>
+        
+        <button> 
+            <a href = "Accueil text.html"> En savoir plus </a>
+        </button>
+    </div>
+</div>
+  </body>
+</html>

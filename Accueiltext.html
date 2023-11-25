@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Accueil </title>
+    
+    <style>
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #090691; 
+            border-radius: inherit;
+            
+            
+
+        }
+
+        textarea {
+            display: flexbox;
+            width: 50%;
+            height: 200px;
+            background-position: center;
+            background-color: aliceblue;
+            border-radius: initial;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic ;
+            flood-opacity: inherit;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="image html/pigier logo 1.png" alt="Logo Pigier">
+    </div>
+
+    
+    <textarea id="demo"></textarea>
+
+    <script>
+        var i = 0;
+        var txt = 'Pigier Bénin est une institution privée d\'enseignement supérieur située à Cotonou, au Bénin. Elle représente la franchise de la marque Pigier, qui a été fondée en France en 1850. L\'établissement a établi sa présence au Bénin en 1993 et a obtenu l\'agrément de l\'État béninois en 1997. Pigier Bénin offre des formations diplômantes et professionnelles de Bac + 3 à Bac + 5 dans divers domaines. Elle est également le premier centre agréé des examens Microsoft Office intégré à une école au Bénin. Plus de 5000 apprenants ont été formés et présentés à la certification Microsoft Office avec un taux de réussite d’environ 75%. Pigier Bénin est reconnue pour son engagement envers l\'excellence académique et la réussite des étudiants. Elle continue de jouer un rôle clé dans la formation des leaders de demain au Bénin.';
+        var speed = 40;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("demo").value += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        typeWriter();
+    </script>
+
+</body>
+
+</html>
